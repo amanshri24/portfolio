@@ -10,8 +10,6 @@ option.addEventListener("click", function () {
   close.style.zIndex = "9999";
    option.style.opacity = "0";
    close.style.opacity = "1";
-
-  // option.style.display = "none";
 })
 close.addEventListener("click", function () {
   close.style.transform = "rotate(-90deg)";
@@ -21,9 +19,4 @@ close.addEventListener("click", function () {
   option.style.zIndex = "9999";
   option.style.opacity = "1";
   close.style.opacity = "0";
-
-  // close.style.transform = "rotate(90deg)";
-
-  // option.style.display = "flex";
-  // close.style.display = "none";
 });

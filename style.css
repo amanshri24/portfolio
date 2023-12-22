@@ -1,27 +1,3 @@
-@font-face {
-    font-family: roboto;
-    src: url(/Roboto-Black.woff);
-}
-@font-face {
-    font-family: roboto;
-    src: url(/Roboto-Bold.woff);
-}
-@font-face {
-    font-family: roboto;
-    src: url(/Roboto-Light.woff);
-}
-@font-face {
-    font-family: roboto;
-    src: url(/Roboto-Medium.woff);
-}
-@font-face {
-    font-family: roboto;
-    src: url(/Roboto-Regular.woff);
-}
-@font-face {
-    font-family: roboto;
-    src: url(/Roboto-Thin.woff);
-}
 *{
     margin: 0;
     padding: 0;
@@ -34,7 +10,7 @@ html,body{
 }
 nav{
     position: fixed;
-    height: 12vh;
+    height: 6vw;
     width: 100vw;
     background-color: white;
     z-index: 99;
@@ -44,7 +20,7 @@ nav{
     display: flex;
     justify-content: space-between;
     margin: 2.5vw 10vw;
-    width: 75%;
+    width: 75vw;
     z-index: 999;
 
 }
@@ -62,6 +38,7 @@ nav{
 }
 .nav-left h1{
     font-size: 2.5vw;
+    font-weight: 600;
 }
 .nav-right{
     display: flex;
@@ -75,6 +52,7 @@ nav{
     transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5s;
     margin-left: 2vw;
     font-size: 1.5vw;
+    font-weight: 600;
 }
 h3:hover{
     color: #FF5925;
@@ -127,13 +105,13 @@ h3:hover{
     font-size: 2vw;
 }
 article{
-    min-height: 100vh;
-    width: 100%;
+    min-height: 100vw;
+    width: 90vw;
 }
 .landingpage{
     position: relative;
-    height: 100vh;
-    width: 100%;
+    height: 50vw;
+    width: 90vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -142,7 +120,7 @@ article{
     display: flex;
     align-items: flex-end;
     position: relative;
-    height: 80vh;
+    height: 40vw;
     width: 80vw;
 }
 .section-one-left{
@@ -177,7 +155,7 @@ article{
 
 .slider{
     height: 40vw;
-    width: 100%;
+    width: 98vw;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -187,14 +165,14 @@ article{
     background-color: rgba(0, 0, 0, 0.807);
     position: relative;
     height: 12vw;
-    width: 100%;
+    width: 98vw;
 
 }
 .two-slider .slide{
     display: flex;
     white-space: nowrap;
     position: absolute;
-    width: 100%;
+    width: 100vw;
     gap: 8vw;
     margin-top: 2vw;
 }
@@ -215,10 +193,10 @@ article{
 
 .projects{
     min-height: 100vh;
-    width: 100%;
+    width: 90vw;
 }
 .project{
-    width: 85%;
+    width: 85vw;
 }
 .project-text{
     width: 100%;
@@ -230,8 +208,8 @@ article{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 40vh;
-    width: 50%;
+    height: 20vw;
+    width: 50vw;
     gap: 2vw;
 }
 .project-text-left header{
@@ -246,6 +224,13 @@ article{
     background-color: #FF5700;
     border-radius: 50%;
 }
+.project-text-left header .triangle{
+    margin-right: 1vw;
+    display: inline-block;
+    background-color: #5CDA42;
+    height: 2.3vw;
+    width: 2.3vw;
+}
 .project-text-left p{
     text-transform: uppercase;
     font-size: 1.3vw;
@@ -259,7 +244,7 @@ article{
     flex-direction: column;
     gap: 4vw;
     width: 50%;
-    height: 50vh;
+    height: 25vw;
     margin-left: 5vw;
 }
 .project-text-right h1{
@@ -280,19 +265,19 @@ article{
     position: relative;
     display: flex;
     justify-content: center;
-    height: 100vh;
+    height: 50vw;
     width: 100%;
 }
 .desktop-img{
     overflow: hidden;
-    height: 70vh;
-    width: 75%;
-    border-radius: 60px;
+    height: 35vw;
+    width: 65vw;
+    border-radius: 4vw;
     border: 0.7vw solid black;
 }
 .desktop-img img{
-    height: 90vh;
-    width: 100%;
+    height: 45vw;
+    width: 65vw;
     background-size: cover;
     background-position: center;
 }
@@ -300,16 +285,16 @@ article{
     overflow: hidden;
     bottom: 10vw;
     position: absolute;
-    height: 70vh;
-    width: 25%;
+    height: 35vw;
+    width: 20vw;
     right: -2vw;
-    border-radius: 60px;
+    border-radius: 4vw;
     border: 0.7vw solid black;
 
 }
 .mobile-img img{
-    height: 70vh;
-    width: 100%;
+    height: 35vw;
+    width: 20vw;
     background-size: cover;
     background-position:center;
 }
@@ -318,7 +303,7 @@ article{
     justify-content: flex-end;
     align-items: center;
     height: 10vw;
-    width: 100%;
+    width: 90vw;
 }
 .see-more-projects .content{
     position: relative;
@@ -339,11 +324,18 @@ article{
     top: 2.5vw;
     position: absolute;
     content: "";
-    background-color: black;
+    background-color: rgb(8, 15, 71);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
     height: 0.3vw;
     width: 100%;
     border-radius: 100px;
 }
+.content:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
 
 
 .footer{
@@ -369,7 +361,11 @@ article{
 
 
 @media only screen and (max-width: 768px){
+    .landingpage{
+        height: 100vw;
+    }
     .section-one{
+        height: 70vw;
         display: flex;
         flex-direction: column-reverse;
         align-items: flex-start;
@@ -403,9 +399,16 @@ article{
     .section-one-right span img{
         height: 4vw;
     }
+    .project-text{
+        display: flex;
+        flex-direction: column;
+    }
+    .project-text-right{
+        margin-left: 15vw;
+    }
 }
 
-@media only screen and (max-width: 450px){
+/* @media only screen and (max-width: 450px){
     .nav{
     margin: 6vw 10vw;
     }
@@ -431,4 +434,4 @@ article{
         height: 6vw;
     }
 }
-
+ */
