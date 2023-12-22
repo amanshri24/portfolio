@@ -1,6 +1,6 @@
 let option = document.querySelector(".options");
 let close = document.querySelector(".close");
-let popup = document.querySelector(".popup-section");
+let popup = document.querySelector(".popup");
 
 option.addEventListener("click", function () {
   option.style.transform = "rotate(90deg)";
