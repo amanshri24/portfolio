@@ -209,7 +209,7 @@ article{
     width: 85vw;
 }
 .project-text{
-    width: 100%;
+    width: 90vw;
     display: flex;
     justify-content: space-evenly;
 }

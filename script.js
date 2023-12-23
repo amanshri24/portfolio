@@ -1,3 +1,21 @@
+gsap.to(".first-slider", {
+  scrollTrigger: {
+    trigger: ".first-slider",
+    scroller: "body",
+    scrub: 2,
+  },
+  left: "0%",
+});
+  gsap.to(".second-slider", {
+    scrollTrigger: {
+      trigger: ".second-slider",
+      scroller: "body",
+      scrub: 2,
+    },
+    left: "-55%",
+  });
+
+
 let option = document.querySelector(".options");
 let close = document.querySelector(".close");
 let popup = document.querySelector(".popup");
@@ -42,3 +60,13 @@ document.addEventListener("scroll", function () {
   }
   lastscroll = window.scrollY;
 })
+
+// gsap.to(".first-slider", {
+//   ScrollTrigger: {
+//     trigger: ".section-one-right h1",
+//     scroller: "#main",
+//     scrub: 1,
+//     markers: true,
+//   },
+//   left: "0%",
+// });
