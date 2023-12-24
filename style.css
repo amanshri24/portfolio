@@ -129,7 +129,7 @@ article{
 .section-one{
     display: flex;
     align-items: flex-end;
-    position: relative;
+    position: absolute;
     height: 40vw;
     width: 80vw;
 }
@@ -279,6 +279,7 @@ article{
     width: 100%;
 }
 .desktop-img{
+    position: absolute;
     overflow: hidden;
     height: 35vw;
     width: 65vw;
@@ -367,6 +368,9 @@ article{
     color: black;
     margin-left: 3vw;
 }
+.footer .links a:hover{
+    color: #FF5925;
+}
 
 
 
@@ -391,9 +395,6 @@ article{
 .nav-right .close{
     display: flex;
 }
-/* .popup{
-    display: flex;
-} */
     .img-div img{
         width: 40vw;
     }

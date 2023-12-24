@@ -1,3 +1,45 @@
+var tl = gsap.timeline();
+tl.from(".section-one", {
+  transform: "rotate(90deg)",
+  opacity: "0",
+  ease: "bounce.out",
+  duration: "2.5",
+})
+  .from("nav", {
+    top: "-20%",
+    delay: "-1",
+    duration: "1"
+  })
+
+// document.querySelectorAll(".desktop-img").forEach(function (el) {
+//   console.log(el)
+// })
+
+var sections = gsap.utils.toArray(".desktop-img");
+var nextSections = gsap.utils.toArray(".mobile-img");
+sections.forEach((section) => {
+  gsap.from(section, {
+    scrollTrigger: {
+      trigger: section,
+      scroller: "body",
+    },
+    duration: "2",
+    left: "-30%",
+    width: "30vw"
+  });
+})
+nextSections.forEach((section) => {
+  gsap.from(section, {
+    scrollTrigger: {
+      trigger: section,
+      scroller: "body",
+    },
+    duration: "1.7",
+    right: "-6vw",
+    bottom: "-5vw",
+    width: "15vw",
+  });
+})
 gsap.to(".first-slider", {
   scrollTrigger: {
     trigger: ".first-slider",
@@ -14,6 +56,18 @@ gsap.to(".first-slider", {
     },
     left: "-55%",
   });
+
+
+// ScrollTrigger.batch(".desktop-img",{
+// onEnter: (batch) =>
+    // gsap.from(batch, {
+    //   duration: "2",
+    //   left: "-30%",
+    //   width: "30vw",
+    // });
+// })
+
+
 
 
 let option = document.querySelector(".options");
@@ -60,13 +114,3 @@ document.addEventListener("scroll", function () {
   }
   lastscroll = window.scrollY;
 })
-
-// gsap.to(".first-slider", {
-//   ScrollTrigger: {
-//     trigger: ".section-one-right h1",
-//     scroller: "#main",
-//     scrub: 1,
-//     markers: true,
-//   },
-//   left: "0%",
-// });
